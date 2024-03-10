@@ -12,7 +12,7 @@ public class UFEvents {
 	@SubscribeEvent
 	public void LivingDropsEvent(LivingDropsEvent event) 
 	{
-		if (event.entity instanceof EntitySheep) 
+		if (event.entity instanceof EntitySheep && Config.meatDropSheep) 
 		{
 			if (!event.entityLiving.isChild()) 
 			{
@@ -34,7 +34,7 @@ public class UFEvents {
 				}
 			}
 		}
-		else if (event.entity instanceof EntitySquid) 
+		else if (event.entity instanceof EntitySquid && Config.meatDropSquid) 
 		{
 			Random random = new Random();
 			
